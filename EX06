@@ -1,0 +1,9 @@
+#Desenvolva um script que utilize um loop para contar de 1 a 5
+
+
+#! /bin/bash
+
+for i in $(seq 1 5); do
+	echo "Numero $i"
+done
+

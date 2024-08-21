@@ -1,0 +1,21 @@
+#Crie um script que solicite ao usuário o nome de um diretório e,
+#em seguida, o crie 
+
+#! /bin/bash
+
+echo "Criação de arquivos!!"
+
+read -p "Insira o caminho para o diretório no qual o arquivo vai ser criado" caminho
+
+if [ -d "$caminho" ]; then
+	read -p "O nome do arquivo a ser criado: " nome_arquivo
+	if [ -e "$caminho/$nome_arquivo" ]; then
+		echo "Ja existe um arquivo com este nome $nome_arquivo"
+	else
+		touch "$nome_arquivo"
+	fi
+else
+	echo "Caminho para o diretorio não existe ou esta errado";
+fi
+
+

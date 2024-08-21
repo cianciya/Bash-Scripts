@@ -1,0 +1,18 @@
+#Escreva um script que aceite um nome de arquivo como argumento e verifique
+#se o arquivo existe.
+
+#! /bin/bash
+
+read -p "Caminho do diretorio aonde você quer criar o arquivo: " caminho
+read -p  "Nome do arquivo a ser criado: " nome_arquivo
+
+if [ -d "$caminho"]; then
+	if [ ! -e "$nome_arquivo" ]; then
+		touch "$nome_arquivo"
+	else
+		echo "Já existe um arquivo com o mesmo nome!!!!"
+	fi
+else
+	echo "Caminho para a criação do arquivo incorreto"
+fi
+

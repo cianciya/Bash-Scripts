@@ -1,0 +1,13 @@
+#Construa um script que seja capaz de criar uma cópia de segurança
+#de um diretório específico
+
+#! /bin/bash
+
+read -p "Insira o caminho do diretório para fazer sua copia" caminho
+
+if [-d "$caminho" ]; then
+	cp "$caminho"
+else
+	echo "O diretório esta incorreto ou não existe.!"
+fi
+

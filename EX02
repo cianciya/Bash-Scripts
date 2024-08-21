@@ -1,0 +1,8 @@
+#Elabore um script simples que exiba uma mensagem de boas-vindas
+#quando executado
+
+#! /bin/bash
+
+echo "Boas-vindas ao meu servidor.!"
+
+
